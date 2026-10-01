@@ -1,0 +1,23 @@
+---
+interface Props {
+    number: string;
+    title: string;
+    category: string;
+    color: string;
+}
+
+const { number, title, category, color } = Astro.props;
+import "../stylesheet/style.css";
+---
+
+<article class="project-card" style={`--project-color: ${color}`}>
+    <div class="project-top">
+        <span>{number}</span>
+        <span>Ver proyecto</span>
+    </div>
+
+    <div class="project-information">
+    <p>{category}</p>
+    <h1>{title}</h1>
+    </div>
+</article>

@@ -1,17 +1,64 @@
 ---
-
+const studioName = "timeless";
+import "../stylesheet/style.css";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
-
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta 
+        name="description"
+        content="Estudio fotografico especializado en capturar momentos unicos"
+        />
+        <title>{studioName} | Estudio Fotográfico</title>
+    </head>
+
+    <body>
+        <header class="site-header">
+            <a class="brand" href="/">{studioName}</a>
+
+            <nav aria-label="Navegacion principal">
+                <a href="portafolio">Portafolio</a>
+                <a href="nosotros">Nosotros</a>
+                <a href="contacto">Contacto</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+
+                <p class="eyebrow">Estudio Fotográfico</p>
+                <h1>{studioName}</h1>
+                <p class="introduction">
+                    Especializados en capturar momentos únicos y crear imágenes que cuenten historias.
+                </p>
+            </section>
+            <section class="portfolio" id="portfolio">
+                <ProjectCard
+                    number="01"
+                    title="Boda"
+                    category="Fotografía de bodas"
+                    color="#e2c3a8"
+                />
+                <ProjectCard
+                    number="02"
+                    title="Retrato"
+                    category="Fotografía de retrato"
+                    color="#c3e2a8"
+                />
+                <ProjectCard
+                    number="03"
+                    title="Graduación"
+                    category="Fotografía de graduación"
+                    color="#a8c3e2"
+                />
+            </section>
+        </main>
+    </body>
+
+
+
 </html>
+

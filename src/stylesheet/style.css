@@ -58,12 +58,13 @@ nav a {
 h1 {
     margin: auto 0;
     font-family: "Times New Roman", serif;
-    font-size: clamp(5rem, 198vw, 15rem);
+    font-size: clamp(5rem, 15vw, 18rem);
     font-style: italic;
     font-weight: 200;
     line-height: 0.8;
     letter-spacing: -0.03em;
     white-space: nowrap;
+    
 }
 
 .introduction {
@@ -94,11 +95,11 @@ h1 {
 }
 
 .project-card {
-    min-height: 28rem;
+    min-height: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 20px;
     background-color: var(--color-background);
     color: #111111;
     transition: filter 300ms ease;
@@ -120,10 +121,10 @@ h1 {
 		text-transform: uppercase;
 	}
 
-.project-information h2 {
+.project-information h1 {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: 20px;
     font-style: italic;
     font-weight: 200;
     line-height: 0.9;
@@ -143,3 +144,6 @@ h1 {
     }
 }
 
+.project-image {
+    object-fit: 20%;
+}
